@@ -1,0 +1,148 @@
+makeVector <- function(x = numeric()) {#
+	m <- NULL#
+	set <- function(y) {#
+                x <<- y#
+                x <<- y#
+	}#
+	get <- function() x#
+	setmean <- function(mean) m <<- mean#
+	getmean <- function() m#
+	list(set = set, get = get,#
+             setmean = setmean,#
+             getmean = getmean)#
+}
+makeVector(c(2,4,5,7,8,9,4,6))
+matrix <- c(sample(1:9)); dim(matrix) <- c(3,3); det(matrix);
+matrix
+det(matrix)
+my_matrix <- c(sample(1:9)); dim(my_matrix) <- c(3,3); det(my_matrix);
+rm(matrix)
+my_matrix
+my_matrix
+my_matrix <- c(sample(1:9)); dim(my_matrix) <- c(3,3); det(my_matrix);
+my_matrix <- c(sample(1:9)); dim(my_matrix) <- c(3,3); det(my_matrix);
+makeCacheMatrix <- function(x = matrix()) {#
+	m <- NULL#
+	setmatrix <- function(y) {#
+		x <<- y#
+		m <<- NULL#
+	}#
+	getmatrix <- function () x#
+	setinverse <- function(solve) m <<- solve#
+	getinverse <- function() m#
+	list (set = setmatrix, get = getmatrix, setinverse = setinverse, getinverse = getinverse)#
+}
+makeCacheMatrix(my_matrix)
+cachemean <- function(x, ...) {#
+        m <- x$getmean()#
+        if(!is.null(m)) {#
+			message("getting cached data")#
+			return(m)#
+		}#
+		data <- x$get()#
+		m <- mean(data, ...)#
+		x$setmean(m)#
+		m#
+}
+cacheMean(c(2,4,5,7,8,9,4,6))
+cachemean(c(2,4,5,7,8,9,4,6))
+cacheSolve <- function(x, ...) {#
+        m <- x$getinverse()#
+        if(!is.null(m)) {#
+        	message("getting cached data")#
+        	return(m)#
+        }#
+        data <- x$get()#
+        m <- solve(x)#
+        s$setinverse(m)#
+}
+cacheSolve(my_matrix)
+A <- matrix(1:4, 2, 2)
+solve(A)
+a1 <- makeCacheMatrix(A)
+A.inv <- cacheSolve(a1)
+j <- c(4,5,6,7,8,9)
+makeVector(j)
+cachemean(j)
+makeVector <- function(x = numeric()) {#
+	m <- NULL#
+	set <- function(y) {#
+                x <<- y#
+                x <<- y#
+	}#
+	get <- function() x#
+	setmean <- function(mean) m <<- mean#
+	getmean <- function() m#
+	p <- list(set = set, get = get,#
+             setmean = setmean,#
+             getmean = getmean)#
+}
+cachemean(j)
+makeVector(j)
+p
+makeVector <- function(x = numeric()) {#
+	m <- NULL#
+	set <- function(y) {#
+                x <<- y#
+                x <<- y#
+	}#
+	get <- function() x#
+	setmean <- function(mean) m <<- mean#
+	getmean <- function() m#
+	list(set = set, get = get,#
+             setmean = setmean,#
+             getmean = getmean)#
+}
+makeVector(j)
+cachemean(makeVector(j))
+makeCacheMatrix(my_matrix)
+cacheSolve(makeCacheMatrix(my_matrix))
+my_matrix
+class(my_matrix)
+cacheSolve <- function(x, ...) {#
+        m <- x$getinverse()#
+        if(!is.null(m)) {#
+        	message("getting cached data")#
+        	return(m)#
+        }#
+        data <- x$get()#
+        m <- solve(x)#
+        x$setinverse(m)#
+}
+cacheSolve(makeCacheMatrix(my_matrix))
+cacheSolve <- function(x, ...) {#
+        m <- x$getinverse()#
+        if(!is.null(m)) {#
+        	message("getting cached data")#
+        	return(m)#
+        }#
+        data <- x$get()#
+        m <- solve(as.matrix(x))#
+        x$setinverse(m)#
+}
+cacheSolve(makeCacheMatrix(my_matrix))
+cacheSolve <- function(x, ...) {#
+        m <- x$getinverse()#
+        if(!is.null(m)) {#
+        	message("getting cached data")#
+        	return(m)#
+        }#
+        data <- x$get()#
+        m <- solve(as.numeric(x))#
+        x$setinverse(m)#
+}
+cacheSolve(makeCacheMatrix(my_matrix))
+cacheSolve <- function(x, ...) {#
+        m <- x$getinverse()#
+        if(!is.null(m)) {#
+        	message("getting cached data")#
+        	return(m)#
+        }#
+        data <- x$get()#
+        m <- solve(data,...)#
+        x$setinverse(m)#
+        m#
+}
+cacheSolve(makeCacheMatrix(my_matrix))
+solve(my_matrix)
+cacheSolve(makeCacheMatrix(my_matrix))
